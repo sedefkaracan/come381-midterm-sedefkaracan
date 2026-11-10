@@ -1,0 +1,194 @@
+TRUNCATE TABLE
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+INSERT 0 1
+T01 - Beklenen 23502
+psql:week-05/violations.sql:64: ERROR:  23502: null value in column "first_name" of relation "student" violates not-null constraint
+AYRINTI:  Failing row contains (3, null, Demir, test01@example.edu, null).
+ÞEMA ADI:  public
+TABLO ADI:  student
+SÜTUN ADI:  first_name
+YER:  ReportNotNullViolationError, execMain.c:2219
+T02 - Beklenen 23502
+psql:week-05/violations.sql:70: ERROR:  23502: null value in column "last_name" of relation "student" violates not-null constraint
+AYRINTI:  Failing row contains (4, Ece, null, test02@example.edu, null).
+ÞEMA ADI:  public
+TABLO ADI:  student
+SÜTUN ADI:  last_name
+YER:  ReportNotNullViolationError, execMain.c:2219
+T03 - Beklenen 23502
+psql:week-05/violations.sql:76: ERROR:  23502: null value in column "email" of relation "student" violates not-null constraint
+AYRINTI:  Failing row contains (5, Ece, Demir, null, null).
+ÞEMA ADI:  public
+TABLO ADI:  student
+SÜTUN ADI:  email
+YER:  ReportNotNullViolationError, execMain.c:2219
+T04 - Beklenen 23502
+psql:week-05/violations.sql:82: ERROR:  23502: null value in column "club_name" of relation "club" violates not-null constraint
+AYRINTI:  Failing row contains (3, null, null).
+ÞEMA ADI:  public
+TABLO ADI:  club
+SÜTUN ADI:  club_name
+YER:  ReportNotNullViolationError, execMain.c:2219
+T05 - Beklenen 23502
+psql:week-05/violations.sql:88: ERROR:  23502: null value in column "student_id" of relation "club_membership" violates not-null constraint
+AYRINTI:  Failing row contains (3, null, 1, null).
+ÞEMA ADI:  public
+TABLO ADI:  club_membership
+SÜTUN ADI:  student_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+T06 - Beklenen 23502
+psql:week-05/violations.sql:94: ERROR:  23502: null value in column "club_id" of relation "club_membership" violates not-null constraint
+AYRINTI:  Failing row contains (4, 1, null, null).
+ÞEMA ADI:  public
+TABLO ADI:  club_membership
+SÜTUN ADI:  club_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+T07 - Beklenen 23502
+psql:week-05/violations.sql:101: ERROR:  23502: null value in column "club_id" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (3, null, Test, 2026-11-25, null, null, null, sport, planned).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  club_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+T08 - Beklenen 23502
+psql:week-05/violations.sql:108: ERROR:  23502: null value in column "event_name" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (4, 1, null, 2026-11-25, null, null, null, sport, planned).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  event_name
+YER:  ReportNotNullViolationError, execMain.c:2219
+T09 - Beklenen 23502
+psql:week-05/violations.sql:115: ERROR:  23502: null value in column "event_date" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (5, 1, Test, null, null, null, null, sport, planned).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  event_date
+YER:  ReportNotNullViolationError, execMain.c:2219
+T10 - Beklenen 23502
+psql:week-05/violations.sql:122: ERROR:  23502: null value in column "category" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (6, 1, Test, 2026-11-25, null, null, null, null, planned).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  category
+YER:  ReportNotNullViolationError, execMain.c:2219
+T11 - Beklenen 23502
+psql:week-05/violations.sql:129: ERROR:  23502: null value in column "status" of relation "event" violates not-null constraint
+AYRINTI:  Failing row contains (7, 1, Test, 2026-11-25, null, null, null, sport, null).
+ÞEMA ADI:  public
+TABLO ADI:  event
+SÜTUN ADI:  status
+YER:  ReportNotNullViolationError, execMain.c:2219
+T12 - Beklenen 23502
+psql:week-05/violations.sql:135: ERROR:  23502: null value in column "student_id" of relation "event_registration" violates not-null constraint
+AYRINTI:  Failing row contains (2, null, 1, null).
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+SÜTUN ADI:  student_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+T13 - Beklenen 23502
+psql:week-05/violations.sql:141: ERROR:  23502: null value in column "event_id" of relation "event_registration" violates not-null constraint
+AYRINTI:  Failing row contains (3, 1, null, null).
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+SÜTUN ADI:  event_id
+YER:  ReportNotNullViolationError, execMain.c:2219
+T14 - Beklenen 23505
+psql:week-05/violations.sql:150: ERROR:  23505: duplicate key value violates unique constraint "uq_student_email"
+AYRINTI:  Key (email)=(ada@example.edu) already exists.
+ÞEMA ADI:  public
+TABLO ADI:  student
+KISITLAMA ADI:  uq_student_email
+YER:  _bt_check_unique, nbtinsert.c:673
+T15 - Beklenen 23505
+psql:week-05/violations.sql:156: ERROR:  23505: duplicate key value violates unique constraint "uq_club_membership_student_club"
+AYRINTI:  Key (student_id, club_id)=(1, 1) already exists.
+ÞEMA ADI:  public
+TABLO ADI:  club_membership
+KISITLAMA ADI:  uq_club_membership_student_club
+YER:  _bt_check_unique, nbtinsert.c:673
+T16 - Beklenen 23505
+psql:week-05/violations.sql:162: ERROR:  23505: duplicate key value violates unique constraint "uq_event_registration_student_event"
+AYRINTI:  Key (student_id, event_id)=(1, 1) already exists.
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  uq_event_registration_student_event
+YER:  _bt_check_unique, nbtinsert.c:673
+T17 - Beklenen 23514
+psql:week-05/violations.sql:172: ERROR:  23514: new row for relation "event" violates check constraint "chk_event_capacity"
+AYRINTI:  Failing row contains (8, 1, Kapasite Testi, 2026-12-01, null, null, 0, sport, planned).
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  chk_event_capacity
+YER:  ExecConstraints, execMain.c:2081
+T18 - Beklenen 23514
+psql:week-05/violations.sql:179: ERROR:  23514: new row for relation "event" violates check constraint "chk_event_status"
+AYRINTI:  Failing row contains (9, 1, Durum Testi, 2026-12-01, null, null, null, sport, unknown).
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  chk_event_status
+YER:  ExecConstraints, execMain.c:2081
+T19 - Beklenen 23514
+psql:week-05/violations.sql:187: ERROR:  23514: new row for relation "event" violates check constraint "chk_event_date_order"
+AYRINTI:  Failing row contains (10, 1, Tarih Testi, 2026-12-10, null, 2026-12-09, null, sport, planned).
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  chk_event_date_order
+YER:  ExecConstraints, execMain.c:2081
+T20 - Beklenen 23503
+psql:week-05/violations.sql:196: ERROR:  23503: insert or update on table "club_membership" violates foreign key constraint "fk_club_membership_student"
+AYRINTI:  Key (student_id)=(9999) is not present in table "student".
+ÞEMA ADI:  public
+TABLO ADI:  club_membership
+KISITLAMA ADI:  fk_club_membership_student
+YER:  ri_ReportViolation, ri_triggers.c:2783
+T21 - Beklenen 23503
+psql:week-05/violations.sql:202: ERROR:  23503: insert or update on table "club_membership" violates foreign key constraint "fk_club_membership_club"
+AYRINTI:  Key (club_id)=(9999) is not present in table "club".
+ÞEMA ADI:  public
+TABLO ADI:  club_membership
+KISITLAMA ADI:  fk_club_membership_club
+YER:  ri_ReportViolation, ri_triggers.c:2783
+T22 - Beklenen 23503
+psql:week-05/violations.sql:209: ERROR:  23503: insert or update on table "event" violates foreign key constraint "fk_event_club"
+AYRINTI:  Key (club_id)=(9999) is not present in table "club".
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  fk_event_club
+YER:  ri_ReportViolation, ri_triggers.c:2783
+T23 - Beklenen 23503
+psql:week-05/violations.sql:215: ERROR:  23503: insert or update on table "event_registration" violates foreign key constraint "fk_event_registration_student"
+AYRINTI:  Key (student_id)=(9999) is not present in table "student".
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  fk_event_registration_student
+YER:  ri_ReportViolation, ri_triggers.c:2783
+T24 - Beklenen 23503
+psql:week-05/violations.sql:221: ERROR:  23503: insert or update on table "event_registration" violates foreign key constraint "fk_event_registration_event"
+AYRINTI:  Key (event_id)=(9999) is not present in table "event".
+ÞEMA ADI:  public
+TABLO ADI:  event_registration
+KISITLAMA ADI:  fk_event_registration_event
+YER:  ri_ReportViolation, ri_triggers.c:2783
+T25 - Beklenen 23001
+psql:week-05/violations.sql:226: ERROR:  23001: update or delete on table "club" violates RESTRICT setting of foreign key constraint "fk_event_club" on table "event"
+AYRINTI:  Key (club_id)=(1) is referenced from table "event".
+ÞEMA ADI:  public
+TABLO ADI:  event
+KISITLAMA ADI:  fk_event_club
+YER:  ri_ReportViolation, ri_triggers.c:2797
+T26 - Beklenen OK
+INSERT 0 1
+T27 - Beklenen OK
+INSERT 0 1
+T28 - Beklenen OK
+INSERT 0 1
+T29 - Beklenen 23503
+psql:week-05/violations.sql:274: ERROR:  23503: update or delete on table "student" violates foreign key constraint "fk_club_membership_student" on table "club_membership"
+AYRINTI:  Key (student_id)=(1) is still referenced from table "club_membership".
+ÞEMA ADI:  public
+TABLO ADI:  club_membership
+KISITLAMA ADI:  fk_club_membership_student
+YER:  ri_ReportViolation, ri_triggers.c:2811
